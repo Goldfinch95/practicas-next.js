@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background: #222;
+  font-family: system-ui;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tw-followCard{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: .8rem;
+}
+
+.tw-followCard-header{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tw-followCard-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tw-followCard-infoUserName{
+  opacity: .6;
+}
+
+.tw-followCard-avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -ms-border-radius: 1000px;
+  -o-border-radius: 1000px;
+}
+
+.tw-followCard-button{
+   cursor: pointer;
+   margin-left: 16px;
+   border: 0;
+   border-radius: 999px;
+   padding: 6px 16px;
+   font-weight: bold;
+   -webkit-border-radius: 999px;
+   -moz-border-radius: 999px;
+   -ms-border-radius: 999px;
+   -o-border-radius: 999px;
+   border: 1px solid #000;
+   transition: .3s base background-color;
+   -webkit-transition: .3s base background-color;
+   -moz-transition: .3s base background-color;
+   -ms-transition: .3s base background-color;
+   -o-transition: .3s base background-color;
+}
+
+.tw-followCard-button.is-following{
+  border: 1px solid #bbb;
+  background-color: transparent;
+  color: #fff;
+  width: 140px;
+}
+
+.tw-followCard-button:hover{
+  opacity: .8;
+}
+
+.tw-followcard-text{
+  display: block;
+}
+
+.tw-followCard-button.is-following:hover{
+  background-color: rgba(255, 0, 0, 0.178);
+  color: red;
+  border: 1px solid red;
+  transition: .3 ease all;
+  -webkit-transition: .3 ease all;
+  -moz-transition: .3 ease all;
+  -ms-transition: .3 ease all;
+  -o-transition: .3 ease all;
+  opacity: 1;
+}
+
+.tw-followCard-button.is-following:hover .tw-followcard-text{
+  display: none;
+}
+
+.tw-followCard-stopFollow{
+  display: none;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-stopFollow{
+  display: block;
+}
