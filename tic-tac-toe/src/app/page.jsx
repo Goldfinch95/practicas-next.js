@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from 'react'
+import confetti from 'canvas-confetti'
 import Image from 'next/image'
 import styles from './page.module.css'
 import Square from '@/components/Square'
@@ -69,6 +70,7 @@ export default function Home() {
     //revisar si hay un ganador
     const newWinner = checkWinner(newBoard)
     if(newWinner){
+      confetti()
       setWinner(newWinner)
     } else if (checkEndGame(newBoard)){
       setWinner(false)
